@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Converter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="textConverter.js" defer></script> <!-- TextConverter kütüphanesi -->
+    <link rel="stylesheet" href="styles.css"> <!-- Dış stil dosyası -->
+</head>
+<body>
+    <div class="container">
+        <h2>Text Converter</h2>
+        <textarea id="inputText" placeholder="Enter text here..."></textarea>
+        <div class="button-container">
+            <button class="action-btn" onclick="TextConverter.toUpperCase(inputText, outputText)">
+                <i class="fas fa-arrow-up"></i> Uppercase
+            </button>
+            <button class="action-btn" onclick="TextConverter.toLowerCase(inputText, outputText)">
+                <i class="fas fa-arrow-down"></i> Lowercase
+            </button>
+            <button class="action-btn" onclick="TextConverter.capitalizeWords(inputText, outputText)">
+                <i class="fas fa-text-height"></i> Capitalize Words
+            </button>
+            <button class="action-btn" onclick="TextConverter.normalizeSentence(inputText, outputText)">
+                <i class="fas fa-paragraph"></i> Normalize Sentence
+            </button>
+            <button class="action-btn" onclick="TextConverter.copyToClipboard(outputText)">
+                <i class="fas fa-copy"></i> Copy to Clipboard
+            </button>
+        </div>
+        <h3>Converted Text:</h3>
+        <textarea id="outputText" readonly></textarea>
+    </div>
+</body>
+</html>
