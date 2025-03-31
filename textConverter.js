@@ -1,4 +1,4 @@
-// Text Converter Kütüphanesi
+// Text Converter Library
 const TextConverter = (() => {
     // Uppercase dönüştürme
     const toUpperCase = (inputElement, outputElement) => {
@@ -6,25 +6,25 @@ const TextConverter = (() => {
         outputElement.value = inputText.toUpperCase();
     };
 
-    // Lowercase dönüştürme
+    // Lowercase 
     const toLowerCase = (inputElement, outputElement) => {
         const inputText = inputElement.value;
         outputElement.value = inputText.toLowerCase();
     };
 
-    // Her kelimenin ilk harfini büyük yapma
+    // FirstUpper
     const capitalizeWords = (inputElement, outputElement) => {
         const inputText = inputElement.value;
         outputElement.value = inputText.replace(/\b\w/g, char => char.toUpperCase());
     };
 
-    // Cümleyi normalize etme (ilk harfi büyük yapma)
+    // Normalize
     const normalizeSentence = (inputElement, outputElement) => {
         const inputText = inputElement.value;
         outputElement.value = inputText.charAt(0).toUpperCase() + inputText.slice(1).toLowerCase();
     };
 
-    // Metni panoya kopyalama
+    // Copy
     const copyToClipboard = (outputElement) => {
         outputElement.select();
         document.execCommand("copy");

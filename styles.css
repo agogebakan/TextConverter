@@ -1,4 +1,4 @@
-/* Genel stil ayarları */
+/* General */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -28,7 +28,7 @@ h2, h3 {
     color: #333;
 }
 
-/* Butonlar */
+/* Butons */
 .button-container {
     margin: 20px 0;
 }
