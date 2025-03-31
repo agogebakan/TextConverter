@@ -25,6 +25,15 @@
             <button class="action-btn" onclick="TextConverter.normalizeSentence(inputText, outputText)">
                 <i class="fas fa-paragraph"></i> Normalize Sentence
             </button>
+			<button class="action-btn" onclick="TextConverter.removeHtmlTags(inputText, outputText)">
+                <i class="fas fa-code"></i> Remove HTML Tags
+            </button>
+			<button class="action-btn" onclick="TextConverter.removeNewLines(inputText, outputText)">
+                <i class="fas fa-minus"></i> Remove New Lines
+            </button>
+            <button class="action-btn" onclick="TextConverter.removeCarriageReturns(inputText, outputText)">
+                <i class="fas fa-eraser"></i> Remove Carriage Returns
+            </button>
             <button class="action-btn" onclick="TextConverter.copyToClipboard(outputText)">
                 <i class="fas fa-copy"></i> Copy to Clipboard
             </button>

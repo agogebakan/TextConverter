@@ -1,6 +1,6 @@
 // Text Converter Library
 const TextConverter = (() => {
-    // Uppercase dönüştürme
+    // Uppercase 
     const toUpperCase = (inputElement, outputElement) => {
         const inputText = inputElement.value;
         outputElement.value = inputText.toUpperCase();
@@ -24,6 +24,24 @@ const TextConverter = (() => {
         outputElement.value = inputText.charAt(0).toUpperCase() + inputText.slice(1).toLowerCase();
     };
 
+    // Remove new lines
+    const removeNewLines = (inputElement, outputElement) => {
+        const inputText = inputElement.value;
+        outputElement.value = inputText.replace(/\n/g, "");
+    };
+
+    // Remove carriage returns
+    const removeCarriageReturns = (inputElement, outputElement) => {
+        const inputText = inputElement.value;
+        outputElement.value = inputText.replace(/\r/g, "");
+    };
+	
+	// Remove HTML tags
+    const removeHtmlTags = (inputElement, outputElement) => {
+        const inputText = inputElement.value;
+        outputElement.value = inputText.replace(/<[^>]*>/g, "");
+    };
+
     // Copy
     const copyToClipboard = (outputElement) => {
         outputElement.select();
@@ -36,6 +54,9 @@ const TextConverter = (() => {
         toLowerCase,
         capitalizeWords,
         normalizeSentence,
+        removeNewLines,
+        removeCarriageReturns,
+        removeHtmlTags,
         copyToClipboard
     };
 })();
